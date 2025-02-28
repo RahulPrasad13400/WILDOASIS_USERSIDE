@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { updateGuest } from "../_lib/actions";
 import { useFormStatus } from "react-dom";
+import SubmitButton from "./SubmitButton";
 // import SelectCountry from "./SelectCountry";
 
 export default function UpdateProfileForm({children, guest}) {
@@ -66,7 +67,9 @@ export default function UpdateProfileForm({children, guest}) {
     </div>
 
     <div className="flex justify-end items-center gap-6">
-        <Button></Button>
+        <SubmitButton pendingLabel='Updating...'>
+          Update Profile
+        </SubmitButton>
     </div>
   </form>
   )
